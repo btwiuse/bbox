@@ -18,7 +18,7 @@ Linux)
 esac
 
 BINDIR="$(dirname $(realpath "${BINARY}"))"
-find "${BINDIR}"
-export PATH="$PATH:${BINDIR}"
 
-${BINARY} "$@"
+# ${BINARY} "$@"
+
+echo export PATH="$PATH:${BINDIR}"
