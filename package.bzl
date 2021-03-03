@@ -87,84 +87,84 @@ def register_repositories():
   )
 
   http_archive(
-      name = "tsfmt",
-      urls = ["https://github.com/oferb/startupos-binaries/releases/download/0.1.03/tsfmt.zip"],
-      build_file_content = "exports_files(['cli-linux', 'cli-macos'])",
+    name = "tsfmt",
+    urls = ["https://github.com/oferb/startupos-binaries/releases/download/0.1.03/tsfmt.zip"],
+    build_file_content = "exports_files(['cli-linux', 'cli-macos'])",
   )
 
   http_archive(
-      name = "etcd",
-      urls = ["https://github.com/etcd-io/etcd/releases/download/v3.4.5/etcd-v3.4.5-linux-amd64.tar.gz"],
-      strip_prefix = "etcd-v3.4.5-linux-amd64",
-      build_file_content = "exports_files(['etcd', 'etcdctl'])",
+    name = "etcd",
+    urls = ["https://github.com/etcd-io/etcd/releases/download/v3.4.5/etcd-v3.4.5-linux-amd64.tar.gz"],
+    strip_prefix = "etcd-v3.4.5-linux-amd64",
+    build_file_content = "exports_files(['etcd', 'etcdctl'])",
   )
 
   http_archive(
-      name = "helm",
-      urls = ["https://get.helm.sh/helm-v3.2.4-linux-amd64.tar.gz"],
-      strip_prefix = "linux-amd64",
-      build_file_content = "exports_files(['helm'])",
+    name = "helm",
+    urls = ["https://get.helm.sh/helm-v3.2.4-linux-amd64.tar.gz"],
+    strip_prefix = "linux-amd64",
+    build_file_content = "exports_files(['helm'])",
   )
 
   http_archive(
-      name = "helm_osx",
-      urls = ["https://get.helm.sh/helm-v3.2.4-darwin-amd64.tar.gz"],
-      strip_prefix = "darwin-amd64",
-      build_file_content = "exports_files(['helm'])",
+    name = "helm_osx",
+    urls = ["https://get.helm.sh/helm-v3.2.4-darwin-amd64.tar.gz"],
+    strip_prefix = "darwin-amd64",
+    build_file_content = "exports_files(['helm'])",
   )
 
   http_archive(
-      name = "bat",
-      urls = ["https://github.com/sharkdp/bat/releases/download/v0.15.4/bat-v0.15.4-x86_64-unknown-linux-gnu.tar.gz"],
-      strip_prefix = "bat-v0.15.4-x86_64-unknown-linux-gnu",
-      build_file_content = "exports_files(['bat'])",
+    name = "bat",
+    urls = ["https://github.com/sharkdp/bat/releases/download/v0.15.4/bat-v0.15.4-x86_64-unknown-linux-gnu.tar.gz"],
+    strip_prefix = "bat-v0.15.4-x86_64-unknown-linux-gnu",
+    build_file_content = "exports_files(['bat'])",
   )
 
   http_archive(
-      name = "bat_osx",
-      urls = ["https://github.com/sharkdp/bat/releases/download/v0.15.4/bat-v0.15.4-x86_64-apple-darwin.tar.gz"],
-      strip_prefix = "bat-v0.15.4-x86_64-apple-darwin",
-      build_file_content = "exports_files(['bat'])",
+    name = "bat_osx",
+    urls = ["https://github.com/sharkdp/bat/releases/download/v0.15.4/bat-v0.15.4-x86_64-apple-darwin.tar.gz"],
+    strip_prefix = "bat-v0.15.4-x86_64-apple-darwin",
+    build_file_content = "exports_files(['bat'])",
   )
 
   http_archive(
-      name = "k9s",
-      urls = ["https://github.com/derailed/k9s/releases/download/v0.21.7/k9s_Linux_x86_64.tar.gz"],
-      build_file_content = "exports_files(['k9s'])",
+    name = "k9s",
+    urls = ["https://github.com/derailed/k9s/releases/download/v0.21.7/k9s_Linux_x86_64.tar.gz"],
+    build_file_content = "exports_files(['k9s'])",
   )
 
   http_archive(
-      name = "k9s_osx",
-      urls = ["https://github.com/derailed/k9s/releases/download/v0.21.7/k9s_Darwin_x86_64.tar.gz"],
-      build_file_content = "exports_files(['k9s'])",
+    name = "k9s_osx",
+    urls = ["https://github.com/derailed/k9s/releases/download/v0.21.7/k9s_Darwin_x86_64.tar.gz"],
+    build_file_content = "exports_files(['k9s'])",
   )
 
   http_archive(
-      name = "pulumi",
-      strip_prefix = "pulumi",
-      urls = ["https://get.pulumi.com/releases/sdk/pulumi-v2.21.2-linux-x64.tar.gz"],
-      # build_file_content = "exports_files(glob(['**']))",
-      build_file_content = """package(default_visibility = ["//visibility:public"])
-      all_files = glob(["**"])
-      exports_files(all_files)
-      filegroup(
-	name = "filegroup",
-	srcs = all_files,
-      )
-      """,
+    name = "pulumi",
+    strip_prefix = "pulumi",
+    urls = ["https://get.pulumi.com/releases/sdk/pulumi-v2.21.2-linux-x64.tar.gz"],
+    # build_file_content = "exports_files(glob(['**']))",
+    build_file_content = """package(default_visibility = ["//visibility:public"])
+    all_files = glob(["**"])
+    exports_files(all_files)
+    filegroup(
+      name = "filegroup",
+      srcs = all_files,
+    )
+    """,
   )
 
   http_archive(
-      name = "pulumi_osx",
-      urls = ["https://get.pulumi.com/releases/sdk/pulumi-v2.21.2-darwin-x64.tar.gz"],
-      strip_prefix = "pulumi",
-      # build_file_content = "exports_files(glob(['**']))",
-      build_file_content = """package(default_visibility = ["//visibility:public"])
-      all_files = glob(["**"])
-      exports_files(all_files)
-      filegroup(
-	name = "filegroup",
-	srcs = all_files,
-      )
-      """,
+    name = "pulumi_osx",
+    urls = ["https://get.pulumi.com/releases/sdk/pulumi-v2.21.2-darwin-x64.tar.gz"],
+    strip_prefix = "pulumi",
+    # build_file_content = "exports_files(glob(['**']))",
+    build_file_content = """package(default_visibility = ["//visibility:public"])
+    all_files = glob(["**"])
+    exports_files(all_files)
+    filegroup(
+      name = "filegroup",
+      srcs = all_files,
+    )
+    """,
   )
