@@ -143,8 +143,8 @@ sh_binary(
     "bazel_tools/pulumi.sh",
   ],
   data = [
-    "@pulumi//:k9s",
-    "@pulumi_osx//:k9s",
+    "@pulumi//:pulumi",
+    "@pulumi_osx//:pulumi",
   ],
 )
 
