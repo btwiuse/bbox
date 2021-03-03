@@ -17,8 +17,8 @@ Linux)
   ;;
 esac
 
-pwd
-ls
-echo $(realpath $0)
+echo $platform
+find $(dirname $platform)
+export PATH="$PATH:$(dirname $platform)"
 
 ${BINARY} "$@"
