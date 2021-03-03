@@ -6,10 +6,10 @@ platform=$(uname)
 
 case $platform in
 Darwin)
-  BINARY=$(find . -iwholename "*pulumi_osx/file/downloaded" -name pulumi)
+  BINARY=$(find . -iwholename "*pulumi_osx/pulumi")
   ;;
 Linux)
-  BINARY=$(find . -iwholename "*pulumi/file/downloaded" -name pulumi)
+  BINARY=$(find . -iwholename "*pulumi/pulumi")
   ;;
 *)
   echo "pulumi doesn not have a binary for $platform"
