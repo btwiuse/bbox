@@ -157,3 +157,15 @@ sh_binary(
     "@new_k0s//:filegroup",
   ],
 )
+
+sh_binary(
+  name = "android_ndk",
+  srcs = [
+    "scripts/android_ndk.sh",
+  ],
+  data = [
+    "@android_ndk//:ANDROID_NDK_HOME",
+  ],
+)
+
+# load("//:android_ndk.bzl", "ANDROID_NDK_HOME")
