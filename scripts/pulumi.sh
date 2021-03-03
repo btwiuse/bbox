@@ -17,8 +17,8 @@ Linux)
   ;;
 esac
 
-echo ${BINARY}
-find $(dirname $BINARY)
-export PATH="$PATH:$(dirname $BINARY)"
+BINDIR="$(dirname $(realpath "${BINARY}"))"
+find "${BINDIR}"
+export PATH="$PATH:${BINDIR}"
 
 ${BINARY} "$@"
