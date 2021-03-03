@@ -145,13 +145,13 @@ def register_repositories():
     urls = ["https://get.pulumi.com/releases/sdk/pulumi-v2.21.2-linux-x64.tar.gz"],
     # build_file_content = "exports_files(glob(['**']))",
     build_file_content = """package(default_visibility = ["//visibility:public"])
-    all_files = glob(["**"])
-    exports_files(all_files)
-    filegroup(
-      name = "filegroup",
-      srcs = all_files,
-    )
-    """,
+all_files = glob(["**"])
+exports_files(all_files)
+filegroup(
+  name = "filegroup",
+  srcs = all_files,
+)
+""",
   )
 
   http_archive(
@@ -160,11 +160,11 @@ def register_repositories():
     strip_prefix = "pulumi",
     # build_file_content = "exports_files(glob(['**']))",
     build_file_content = """package(default_visibility = ["//visibility:public"])
-    all_files = glob(["**"])
-    exports_files(all_files)
-    filegroup(
-      name = "filegroup",
-      srcs = all_files,
-    )
-    """,
+all_files = glob(["**"])
+exports_files(all_files)
+filegroup(
+  name = "filegroup",
+  srcs = all_files,
+)
+""",
   )
