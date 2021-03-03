@@ -1,0 +1,148 @@
+package(default_visibility = ["//visibility:public"])
+
+sh_binary(
+  name = "echo",
+  srcs = [
+    "bazel_tools/echo.sh",
+  ],
+)
+
+sh_binary(
+  name = "upx",
+  srcs = [
+    "bazel_tools/upx.sh",
+  ],
+  data = [
+    "@upx//:upx",
+  # "@upx_osx//file",
+  ],
+)
+
+sh_binary(
+  name = "direnv",
+  srcs = [
+    "bazel_tools/direnv.sh",
+  ],
+  data = [
+    "@direnv//file",
+    "@direnv_osx//file",
+  ],
+)
+
+sh_binary(
+  name = "jq",
+  srcs = [
+    "bazel_tools/jq.sh",
+  ],
+  data = [
+    "@jq//file",
+    "@jq_osx//file",
+  ],
+)
+
+sh_binary(
+  name = "yj",
+  srcs = [
+    "bazel_tools/yj.sh",
+  ],
+  data = [
+    "@yj//file",
+    "@yj_osx//file",
+  ],
+)
+
+sh_binary(
+  name = "yaml",
+  srcs = [
+    "bazel_tools/yaml.sh",
+  ],
+  data = [
+    "@yaml//file",
+    "@yaml_osx//file",
+  ],
+)
+
+sh_binary(
+  name = "kubectl",
+  srcs = [
+    "bazel_tools/kubectl.sh",
+  ],
+  data = [
+    "@kubectl//file",
+    "@kubectl_osx//file",
+  ],
+)
+
+sh_binary(
+  name = "tsfmt",
+  srcs = [
+    "bazel_tools/tsfmt.sh",
+  ],
+  data = [
+    "@tsfmt//:cli-linux",
+    "@tsfmt//:cli-macos",
+  ],
+)
+
+sh_binary(
+  name = "etcd",
+  srcs = [
+    "bazel_tools/etcd.sh",
+  ],
+  data = [
+    "@etcd//:etcd",
+  ],
+)
+
+sh_binary(
+  name = "etcdctl",
+  srcs = [
+    "bazel_tools/etcdctl.sh",
+  ],
+  data = [
+    "@etcd//:etcdctl",
+  ],
+)
+
+sh_binary(
+  name = "helm",
+  srcs = [
+    "bazel_tools/helm.sh",
+  ],
+  data = [
+    "@helm//:helm",
+    "@helm_osx//:helm",
+  ],
+)
+
+sh_binary(
+  name = "bat",
+  srcs = [
+    "bazel_tools/bat.sh",
+  ],
+  data = [
+    "@bat//:bat",
+    "@bat_osx//:bat",
+  ],
+)
+
+sh_binary(
+  name = "k9s",
+  srcs = [
+    "bazel_tools/k9s.sh",
+  ],
+  data = [
+    "@k9s//:k9s",
+    "@k9s_osx//:k9s",
+  ],
+)
+
+sh_binary(
+  name = "k0s",
+  srcs = [
+    "bazel_tools/k0s.sh",
+  ],
+  data = [
+    "@new_k0s//:filegroup",
+  ],
+)
