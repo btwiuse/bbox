@@ -138,6 +138,17 @@ sh_binary(
 )
 
 sh_binary(
+  name = "pulumi",
+  srcs = [
+    "bazel_tools/pulumi.sh",
+  ],
+  data = [
+    "@pulumi//:k9s",
+    "@pulumi_osx//:k9s",
+  ],
+)
+
+sh_binary(
   name = "k0s",
   srcs = [
     "bazel_tools/k0s.sh",

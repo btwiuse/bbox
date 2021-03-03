@@ -138,3 +138,17 @@ def register_repositories():
       urls = ["https://github.com/derailed/k9s/releases/download/v0.21.7/k9s_Darwin_x86_64.tar.gz"],
       build_file_content = "exports_files(['k9s'])",
   )
+
+  http_archive(
+      name = "pulumi",
+      strip_prefix = "pulumi",
+      urls = ["https://get.pulumi.com/releases/sdk/pulumi-v2.21.2-linux-x64.tar.gz"],
+      build_file_content = "exports_files(glob(['**']))",
+  )
+
+  http_archive(
+      name = "pulumi_osx",
+      urls = ["https://get.pulumi.com/releases/sdk/pulumi-v2.21.2-darwin-x64.tar.gz"],
+      strip_prefix = "pulumi",
+      build_file_content = "exports_files(glob(['**']))",
+  )
