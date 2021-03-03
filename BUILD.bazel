@@ -3,14 +3,14 @@ package(default_visibility = ["//visibility:public"])
 sh_binary(
   name = "echo",
   srcs = [
-    "bazel_tools/echo.sh",
+    "scripts/echo.sh",
   ],
 )
 
 sh_binary(
   name = "upx",
   srcs = [
-    "bazel_tools/upx.sh",
+    "scripts/upx.sh",
   ],
   data = [
     "@upx//:upx",
@@ -21,7 +21,7 @@ sh_binary(
 sh_binary(
   name = "direnv",
   srcs = [
-    "bazel_tools/direnv.sh",
+    "scripts/direnv.sh",
   ],
   data = [
     "@direnv//file",
@@ -32,7 +32,7 @@ sh_binary(
 sh_binary(
   name = "jq",
   srcs = [
-    "bazel_tools/jq.sh",
+    "scripts/jq.sh",
   ],
   data = [
     "@jq//file",
@@ -43,7 +43,7 @@ sh_binary(
 sh_binary(
   name = "yj",
   srcs = [
-    "bazel_tools/yj.sh",
+    "scripts/yj.sh",
   ],
   data = [
     "@yj//file",
@@ -54,7 +54,7 @@ sh_binary(
 sh_binary(
   name = "yaml",
   srcs = [
-    "bazel_tools/yaml.sh",
+    "scripts/yaml.sh",
   ],
   data = [
     "@yaml//file",
@@ -65,7 +65,7 @@ sh_binary(
 sh_binary(
   name = "kubectl",
   srcs = [
-    "bazel_tools/kubectl.sh",
+    "scripts/kubectl.sh",
   ],
   data = [
     "@kubectl//file",
@@ -76,7 +76,7 @@ sh_binary(
 sh_binary(
   name = "tsfmt",
   srcs = [
-    "bazel_tools/tsfmt.sh",
+    "scripts/tsfmt.sh",
   ],
   data = [
     "@tsfmt//:cli-linux",
@@ -87,7 +87,7 @@ sh_binary(
 sh_binary(
   name = "etcd",
   srcs = [
-    "bazel_tools/etcd.sh",
+    "scripts/etcd.sh",
   ],
   data = [
     "@etcd//:etcd",
@@ -97,7 +97,7 @@ sh_binary(
 sh_binary(
   name = "etcdctl",
   srcs = [
-    "bazel_tools/etcdctl.sh",
+    "scripts/etcdctl.sh",
   ],
   data = [
     "@etcd//:etcdctl",
@@ -107,7 +107,7 @@ sh_binary(
 sh_binary(
   name = "helm",
   srcs = [
-    "bazel_tools/helm.sh",
+    "scripts/helm.sh",
   ],
   data = [
     "@helm//:helm",
@@ -118,7 +118,7 @@ sh_binary(
 sh_binary(
   name = "bat",
   srcs = [
-    "bazel_tools/bat.sh",
+    "scripts/bat.sh",
   ],
   data = [
     "@bat//:bat",
@@ -129,7 +129,7 @@ sh_binary(
 sh_binary(
   name = "k9s",
   srcs = [
-    "bazel_tools/k9s.sh",
+    "scripts/k9s.sh",
   ],
   data = [
     "@k9s//:k9s",
@@ -140,7 +140,7 @@ sh_binary(
 sh_binary(
   name = "pulumi",
   srcs = [
-    "bazel_tools/pulumi.sh",
+    "scripts/pulumi.sh",
   ],
   data = [
     "@pulumi//:pulumi",
@@ -151,7 +151,7 @@ sh_binary(
 sh_binary(
   name = "k0s",
   srcs = [
-    "bazel_tools/k0s.sh",
+    "scripts/k0s.sh",
   ],
   data = [
     "@new_k0s//:filegroup",
