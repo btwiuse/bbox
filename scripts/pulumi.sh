@@ -21,4 +21,4 @@ BINDIR="$(dirname $(realpath "${BINARY}"))"
 
 # ${BINARY} "$@"
 
-echo export PATH="$PATH:${BINDIR}"
+echo export PATH="\$PATH:${BINDIR}"
