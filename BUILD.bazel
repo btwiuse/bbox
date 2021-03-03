@@ -143,8 +143,8 @@ sh_binary(
     "scripts/pulumi.sh",
   ],
   data = [
-    "@pulumi//:pulumi",
-    "@pulumi_osx//:pulumi",
+    "@pulumi//:filegroup",
+    "@pulumi_osx//:filegroup",
   ],
 )
 
